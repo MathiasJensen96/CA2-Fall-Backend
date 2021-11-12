@@ -71,5 +71,4 @@ public class FacadeExampleTest {
         expected.addRole(userRole);
         assertEquals(expected.getUserName(), actual.getUserName());
     }
-
 }
