@@ -1,6 +1,5 @@
 package utils;
 
-
 import entities.Role;
 import entities.User;
 
@@ -13,6 +12,7 @@ public class SetupTestUsers {
 
     EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
     EntityManager em = emf.createEntityManager();
+
     
     // IMPORTAAAAAAAAAANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // This breaks one of the MOST fundamental security rules in that it ships with default users and passwords
@@ -45,5 +45,4 @@ public class SetupTestUsers {
     System.out.println("Testing user with wrong password: " + user.verifyPassword("test1"));
     System.out.println("Created TEST Users");
   }
-  
 }
