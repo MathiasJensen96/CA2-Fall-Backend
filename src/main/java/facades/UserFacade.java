@@ -69,5 +69,5 @@ public class UserFacade {
             em.close();
         }
     }
-    
+
 }
