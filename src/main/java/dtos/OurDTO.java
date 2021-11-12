@@ -1,7 +1,5 @@
 package dtos;
 
-import java.util.ArrayList;
-
 public class OurDTO {
     private String activity;
     private String type;
@@ -10,13 +8,11 @@ public class OurDTO {
     private String name;
     private String gender;
     private String probability;
-    private ArrayList<String> results;
-
 
     public OurDTO() {
     }
 
-    public OurDTO(BoredDTO boredDTO, CatDTO catDTO, DogDTO dogDTO, GenderizeDTO genderizeDTO, RandomUserDTO randomUserDTO) {
+    public OurDTO(BoredDTO boredDTO, CatDTO catDTO, DogDTO dogDTO, GenderizeDTO genderizeDTO) {
         this.activity = boredDTO.getActivity();
         this.type = boredDTO.getType();
         this.fact = catDTO.getFact();
@@ -24,7 +20,6 @@ public class OurDTO {
         this.name = genderizeDTO.getName();
         this.gender = genderizeDTO.getGender();
         this.probability = genderizeDTO.getProbability();
-        this.results = randomUserDTO.getResults();
     }
 
     public String getActivity() {
@@ -81,13 +76,5 @@ public class OurDTO {
 
     public void setProbability(String probability) {
         this.probability = probability;
-    }
-
-    public ArrayList<String> getResults() {
-        return results;
-    }
-
-    public void setResults(ArrayList<String> results) {
-        this.results = results;
     }
 }

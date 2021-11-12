@@ -5,16 +5,12 @@ import entities.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import security.errorhandling.AuthenticationException;
 
 import java.util.List;
 
-/**
- * @author lam@cphbusiness.dk
- */
 public class UserFacade {
 
     private static EntityManagerFactory emf;
@@ -23,10 +19,6 @@ public class UserFacade {
     private UserFacade() {
     }
 
-    /**
-     * @param _emf
-     * @return the instance of this facade.
-     */
     public static UserFacade getUserFacade(EntityManagerFactory _emf) {
         if (instance == null) {
             emf = _emf;
@@ -76,6 +68,5 @@ public class UserFacade {
         } finally {
             em.close();
         }
-
     }
 }
