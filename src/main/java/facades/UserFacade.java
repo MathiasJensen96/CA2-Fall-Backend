@@ -44,11 +44,12 @@ public class UserFacade {
     public User createUser(String userName, String password) {
         EntityManager em = emf.createEntityManager();
         User user = new User(userName, password);
+
         try {
             em.getTransaction().begin();
-            Role userRole = new Role("user");
-            user.addRole(userRole);
-            em.persist(userRole);
+            //Role userRole = new Role("user");
+            //user.addRole("user");
+            //em.persist(userRole);
             em.persist(user);
             em.getTransaction().commit();
             return user;

@@ -59,6 +59,9 @@ public class DemoResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public String createUser(String user) {
         User u1 = gson.fromJson(user, User.class);
+        System.out.println("******************************");
+        System.out.println(u1.getUserName());
+        System.out.println("******************************");
         userFacade.createUser(u1.getUserName(), u1.getUserPass());
         return "{\"msg\": \"Welcome: " + u1.getUserName() + "\"}";
     }
